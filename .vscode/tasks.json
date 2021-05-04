@@ -1,0 +1,59 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "process",
+			"label": "C/C++: gcc.exe build",
+			"command": "D:\\tools\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\gcc.exe",
+			"args": [
+				"-g",
+				"-municode",
+				"${workspaceFolder}\\main.c",
+				"${workspaceFolder}\\pause.c",
+				"${workspaceFolder}\\prochelper.c",
+				"-o",
+				"${workspaceFolder}\\pauseU.exe"
+			],
+			"options": {
+				"cwd": "D:\\tools\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: D:\\tools\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\gcc.exe"
+		},
+		{
+			"type": "process",
+			"label": "C/C++: gcc.exe build-release",
+			"command": "D:\\tools\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\gcc.exe",
+			"args": [
+				"-Os",
+				"-municode",
+				"-s",
+				"-Wl,--gc-sections",
+				"-fdata-sections",
+				"-ffunction-sections",
+				"${workspaceFolder}\\main.c",
+				"${workspaceFolder}\\pause.c",
+				"${workspaceFolder}\\prochelper.c",
+				"-o",
+				"${workspaceFolder}\\pauseU.exe"
+			],
+			"options": {
+				"cwd": "D:\\tools\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: D:\\tools\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\gcc.exe"
+		}
+	]
+}
